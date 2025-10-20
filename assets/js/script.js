@@ -82,7 +82,6 @@ for (let i = 0; i < teamMembers.length; i++) {
       </div>
     </div>
   `
-  console.log(marckUpString);
   rowEl.insertAdjacentHTML("beforeend", marckUpString)
 }
 
@@ -100,9 +99,7 @@ formEl.addEventListener('submit', (e) => {
     img: image
   }
 
-  console.log(name, role, email, image);
   teamMembers.push(loading)
-  console.log(teamMembers);
 
 
   let marckUpString = `
@@ -119,6 +116,5 @@ formEl.addEventListener('submit', (e) => {
       </div>
     </div>
   `
-  console.log(marckUpString);
   rowEl.insertAdjacentHTML("beforeend", marckUpString)
 })
