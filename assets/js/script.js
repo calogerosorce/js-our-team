@@ -91,13 +91,13 @@ formEl.addEventListener('submit', (e) => {
   let role = roleField.value
   let email = emailField.value
   let image = imageField.value
-  let loading = {
+  const loading = {
     name: name,
     role: role,
     email: email,
     img: image
-
   }
+
   console.log(name, role, email, image);
   teamMembers.push(loading)
   console.log(teamMembers);
@@ -119,7 +119,4 @@ formEl.addEventListener('submit', (e) => {
   `
   console.log(marckUpString);
   rowEl.insertAdjacentHTML("beforeend", marckUpString)
-
-
-
 })
