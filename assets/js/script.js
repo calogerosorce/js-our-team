@@ -102,6 +102,21 @@ formEl.addEventListener('submit', (e) => {
   teamMembers.push(loading)
   console.log(teamMembers);
 
-
+  let marckUpString = `
+    <div class="col col-md-6 col-lg-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+          <img src="./assets/${image}" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">${name}</h5>
+            <p class="card-text">
+              ${role} <br>
+              ${email}
+            </p>
+          </div>
+      </div>
+    </div>
+  `
+  console.log(marckUpString);
+  rowEl.insertAdjacentHTML("beforeend", marckUpString)
 
 })
