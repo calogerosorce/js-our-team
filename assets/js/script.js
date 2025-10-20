@@ -87,11 +87,11 @@ for (let i = 0; i < teamMembers.length; i++) {
 
 formEl.addEventListener('submit', (e) => {
   e.preventDefault()
-  const name = nameField.value
-  const role = roleField.value
-  const email = emailField.value
-  const image = imageField.value
-  const loading = {
+  let name = nameField.value
+  let role = roleField.value
+  let email = emailField.value
+  let image = imageField.value
+  let loading = {
     name: name,
     role: role,
     email: email,
@@ -101,6 +101,7 @@ formEl.addEventListener('submit', (e) => {
   console.log(name, role, email, image);
   teamMembers.push(loading)
   console.log(teamMembers);
+
 
   let marckUpString = `
     <div class="col col-md-6 col-lg-4 d-flex justify-content-center">
@@ -118,5 +119,7 @@ formEl.addEventListener('submit', (e) => {
   `
   console.log(marckUpString);
   rowEl.insertAdjacentHTML("beforeend", marckUpString)
+
+
 
 })
