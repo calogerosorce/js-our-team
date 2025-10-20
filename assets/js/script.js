@@ -117,4 +117,9 @@ formEl.addEventListener('submit', (e) => {
     </div>
   `
   rowEl.insertAdjacentHTML("beforeend", marckUpString)
+
+  nameField.value = '';
+  roleField.value = '';
+  emailField.value = '';
+  imageField.value = '';
 })
