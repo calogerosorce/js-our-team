@@ -10,6 +10,7 @@ Aggiungere un form di aggiunta membri che permetta di visualizzare il nuovo memb
 Tools:
 -Create one string for cards
 -Cicle for
+-add event listener
 */
 
 
@@ -52,7 +53,7 @@ const teamMembers = [
   }
 ];
 
-
+// Creo costanti fontamentali
 const rowEl = document.querySelector('#section .row')
 const formEl = document.getElementById('form')
 const nameField = document.getElementById('inputName')
@@ -61,7 +62,7 @@ const emailField = document.getElementById('inputEmail')
 const imageField = document.getElementById('inputImage')
 
 
-
+// Creo un ciclo FOR per leggere i membri del team e stamparli in pagina 
 for (let i = 0; i < teamMembers.length; i++) {
   const member = teamMembers[i];
   const { name, role, email, img } = member
@@ -85,6 +86,7 @@ for (let i = 0; i < teamMembers.length; i++) {
   rowEl.insertAdjacentHTML("beforeend", marckUpString)
 }
 
+//Creo un add Event Listener per verificare il form e ricreare una card
 formEl.addEventListener('submit', (e) => {
   e.preventDefault()
   let name = nameField.value
