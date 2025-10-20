@@ -66,8 +66,6 @@ const imageField = document.getElementById('inputImage')
 for (let i = 0; i < teamMembers.length; i++) {
   const member = teamMembers[i];
   const { name, role, email, img } = member
-  console.log(name, role, email, img);
-  console.log(member);
   let marckUpString = `
     <div class="col col-md-6 col-lg-4 d-flex justify-content-center">
       <div class="card" style="width: 18rem;">
