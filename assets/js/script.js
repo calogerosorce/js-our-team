@@ -63,7 +63,7 @@ for (let i = 0; i < teamMembers.length; i++) {
   console.log(name, role, email, img);
   console.log(member);
   let marckUpString = `
-    <div class="col-4">
+    <div class="col col-md-6 col-lg-4 d-flex justify-content-center">
       <div class="card" style="width: 18rem;">
           <img src="./assets/${img}" class="card-img-top" alt="...">
           <div class="card-body text-center">
