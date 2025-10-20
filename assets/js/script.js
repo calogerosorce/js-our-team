@@ -5,7 +5,7 @@ Dato un array di oggetti rappresentante un team di un’azienda, creare una pagi
 Bonus
 
 Rendere l’esercizio responsive, mandando a capo le card
-Aggiungere un form di agginta membri che permetta di visualizzare il nuovo membro sulla pagina (usate una foto qualunque, anche vostra se volete sentirvi parte del team! 😀)
+Aggiungere un form di aggiunta membri che permetta di visualizzare il nuovo membro sulla pagina (usate una foto qualunque, anche vostra se volete sentirvi parte del team! 😀)
 
 Tools:
 -Create one string for cards
@@ -54,7 +54,12 @@ const teamMembers = [
 
 
 const rowEl = document.querySelector('#section .row')
-console.log(rowEl);
+const formEl = document.getElementById('form')
+const nameField = document.getElementById('inputName')
+const roleField = document.getElementById('inputRole')
+const emailField = document.getElementById('inputEmail')
+const imageField = document.getElementById('inputImage')
+
 
 
 for (let i = 0; i < teamMembers.length; i++) {
@@ -78,6 +83,25 @@ for (let i = 0; i < teamMembers.length; i++) {
   `
   console.log(marckUpString);
   rowEl.insertAdjacentHTML("beforeend", marckUpString)
-
-
 }
+
+formEl.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const name = nameField.value
+  const role = roleField.value
+  const email = emailField.value
+  const image = imageField.value
+  const loading = {
+    name: name,
+    role: role,
+    email: email,
+    img: image
+
+  }
+  console.log(name, role, email, image);
+  teamMembers.push(loading)
+  console.log(teamMembers);
+
+
+
+})
