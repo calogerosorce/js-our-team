@@ -51,3 +51,28 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+
+for (let i = 0; i < teamMembers.length; i++) {
+  const member = teamMembers[i];
+  const { name, role, email, img } = member
+  console.log(name, role, email, img);
+  console.log(member);
+  const marckUpString = `
+  <div class="col-4 col-ms-1">
+    <div class="card" style="width: 18rem;">
+        <img src="./assets/${img}" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">${name}</h5>
+          <p class="card-text">
+            ${role}
+            ${email}
+          </p>
+        </div>
+    </div>
+  </div>
+`
+  console.log(marckUpString);
+
+}
