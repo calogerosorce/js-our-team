@@ -72,10 +72,8 @@ for (let i = 0; i < teamMembers.length; i++) {
           <img src="./assets/${img}" class="card-img-top" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title">${name}</h5>
-            <p class="card-text">
-              ${role} <br>
-              ${email}
-            </p>
+            <p class="card-text">${role}</p>
+            <p class="text-info">${email}</p>
           </div>
       </div>
     </div>
