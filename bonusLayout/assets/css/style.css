@@ -9,11 +9,13 @@
     justify-content: center;
 
     .carta {
-        max-width: 30%;
+        min-width: 330px;
+        width: calc((100% / 3) - 5%);
         display: flex;
         flex-direction: row;
         padding: 0;
         margin: 20px;
+        flex-wrap: wrap;
     }
 
     .director {
